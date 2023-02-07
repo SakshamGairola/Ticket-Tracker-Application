@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta charset="UTF-8">
+    <title>View Ticket</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+    <div class="navbar">
+        <a class="navbar-brand" href="#">Ticket Tracker Application</a>
+        <a class="nav-link navbar-brand text-sm font-weight-normal" th:href="@{/ticket}">Tickets</a>
+        <a class="navbar-brand text-sm font-weight-normal" th:href="@{/ticket/new}">New Ticket</a>
+    </div>
+</nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                <h1 class="text-center">Ticket Details</h1>
+                <div class="card-body">
+                    <form th:action="@{/}">
+                        <div class="form-group">
+                            <label class="font-weight-bold">
+                                Title
+                            </label>
+                            <span th:text="${ticket.getTitle()}"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">
+                                Short Description
+                            </label>
+                            <span th:text="${ticket.getShortDesc()}"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">
+                                Content
+                            </label>
+                            <span th:text="${ticket.getContent()}"/>
+                        </div>
+                        <div class="box-footer">
+                            <button class="btn btn-primary">
+                                Home
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<scripts>
+    <script crossorigin="anonymous"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</scripts>
+</html>
