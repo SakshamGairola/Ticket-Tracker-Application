@@ -1,7 +1,7 @@
 # Ticket Tracker Application
 SpringMVC Ticket Tracker Application
 
-# This is a three part guide to run this application
+# Application setup
 
 ### 1. Get the source code
 On your local machine make a directory `<directory-name>` and navigate into that
